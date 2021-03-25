@@ -9,7 +9,7 @@ Queue::Queue()
 
 void Queue::enqueue(int i)
 {
-	v.insert(v.begin(), i);//push_back could be used here in an alternative route
+	v.push_back(i);
 	size++;//must increase size or risk error
 }
 
@@ -17,7 +17,7 @@ void Queue::dequeue()
 {
 	if(size > 0)
 	{
-		v.pop_back();
+		v.erase(v.begin());
 		size--;
 	}
 	else
@@ -30,7 +30,7 @@ void Queue::front()
 {
 	if(size > 0)
 	{
-		int x = v[size-1];
+		int x = v[0];
 		std::cout << x << "\n";
 	}
 	else
