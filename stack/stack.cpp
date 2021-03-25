@@ -53,7 +53,7 @@ void Stack::top()
 	}
 	else
 	{
-		int x = v[0];
+		int x = v[size-1];
 		std::cout << x << "\n";
 	}
 }

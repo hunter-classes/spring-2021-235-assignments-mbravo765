@@ -4,34 +4,34 @@
 int main()
 {
 	using std::cout;
-	Stack one;
+	Stack re;
 	std::cout << "Push the following numbers: 2,4,6,8,10" << "\n";
-	one.push(2);
-	one.push(4);
-	one.push(6);
-	one.push(8);
-	one.push(10);
-	one.toString();
+	re.push(2);
+	re.push(4);
+	re.push(6);
+	re.push(8);
+	re.push(10);
+	re.toString();
 
 	std::cout << "Pop an element back" << "\n";
-	one.pop();
-	one.toString();
+	re.pop();
+	re.toString();
 
 	std::cout << "Pop back two more elements" << "\n";
-	one.pop();
-	one.pop();
-	one.toString();
+	re.pop();
+	re.pop();
+	re.toString();
 
 	std::cout << "The top element of the stack container is: " << "\n";
-	one.top();
+	re.top();//should be 8
 
 	std::cout << "Is the string empty?" << "\n";
-	std::cout << one.isEmpty() << "\n";
+	std::cout << re.isEmpty() << "\n";
 
 	std::cout << "Is the string empty after popping back two more elements?" << "\n";
-	one.pop();
-	one.pop();
-	std::cout << one.isEmpty() << "\n";
+	re.pop();
+	re.pop();
+	std::cout << re.isEmpty() << "\n";
 
 }
 
