@@ -9,7 +9,7 @@ Stack::Stack()
 void Stack::push(int i)
 {
 //push is used to push or insert an element at the top of the stack container.
-		v.push_back(i);
+		v.insert(v.begin(),i);
 		size++;
 }
 
@@ -19,7 +19,7 @@ void Stack::pop()
 
 	if(size > 0)
 	{
-		v.pop_back();
+		v.erase(v.begin());
 		size--;
 	}
 
