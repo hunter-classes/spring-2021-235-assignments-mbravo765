@@ -32,6 +32,6 @@ int main()
 	re.pop();
 	re.pop();
 	std::cout << re.isEmpty() << "\n";
-
+return 0;
 }
 
