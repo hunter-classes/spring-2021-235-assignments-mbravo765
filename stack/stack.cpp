@@ -34,9 +34,10 @@ void Stack::top()
 //returns the top element of the stack
 	if(size > 0)
 	{
-		int x = v[size-1];
+		int x = v[0];
 		std::cout << x << "\n";
 	}
+
 	else
 	{
 		std::cout << "stack is empty" << "\n";
