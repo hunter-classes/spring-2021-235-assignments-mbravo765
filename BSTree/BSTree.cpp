@@ -13,16 +13,21 @@ void BSTree::insert(int d)
 
 }
 
-std::string BSTree::get_debug_string()
+std::string BSTree::get_debug_string_helper(Node *bst)
 {
-	if(root == nullptr)
+	if(bst == nullptr)
 	{
 		return "";
 	}
 	else
 	{
-		return std::to_string(root->getData()) + std::to_string(root->getRight()->getData());
+		return get_debug_string_helper(bst->getLeft()) + " " + std::to_string(bst->getData()) + " " + get_debug_string_helper(bst->getRight());
 	}
+}
+
+std::string BSTree::get_debug_string()
+{
+	return get_debug_string_helper(root);
 }
 
 void BSTree::setup()

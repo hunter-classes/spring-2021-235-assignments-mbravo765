@@ -7,10 +7,10 @@ class BSTree
 		Node *root;
 	public:
 		BSTree();
+		std::string get_debug_string_helper(Node *bst);
 		std::string get_debug_string();
 		void insert(int d);
 		void setup();
-
 };
 
 
