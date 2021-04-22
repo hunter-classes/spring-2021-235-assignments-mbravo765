@@ -27,7 +27,7 @@ int main()
 	n2->setRight(n3);
 	cout << n2->getRight()->getData() << "\n";
 
-	Node *n4 = new Node(40);//level 4
+	Node *n4 = new Node(40);//level 3
 	n3->setLeft(n4);
 	cout << n3->getLeft()->getData() << "\n";
 
@@ -35,8 +35,31 @@ int main()
 
 	BSTree *t = new BSTree();
 	t->setup();
-	std::cout << t->get_debug_string() << "\n";
+	cout << t->get_debug_string() << "\n";
+
+	int v = 13;
+	try
+	{
+		int x = t->search(v);
+		cout << x << "\n";
+	}
+	catch(int e)
+	{
+		cout << v << " not found\n";
+	}
+	cout << "insert 22" << "\n";
+	t->insert(22);
+	cout << t->get_debug_string() << "\n";
+	cout << "insert 3" << "\n";
+	t->insert(3);
+	cout << t->get_debug_string() << "\n";
 
 
+	cout << "Recursive search, search for 22" << "\n";
+	cout << t->find_search(22) << "\n";
+
+	cout << "Recursive insert, insert 37" << "\n";
+	t->insert_r(37);
+	cout << t->get_debug_string() << "\n";
 	return 0;
 }
