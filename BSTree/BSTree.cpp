@@ -231,7 +231,7 @@ void BSTree::delete_n(Node *start, Node *back, int value)
 			rsparent->setRight(rs->getRight());
 		}
 		root->setData(rs->getData());
-		//delete rs;
+		delete rs;
 
 	}
    }
