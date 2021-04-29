@@ -61,5 +61,36 @@ int main()
 	cout << "Recursive insert, insert 37" << "\n";
 	t->insert_r(37);
 	cout << t->get_debug_string() << "\n";
-	return 0;
+
+	cout << "Delete 37" << "\n";
+	t->delete_recur(37);
+	cout << t->get_debug_string() << "\n";
+
+	cout << "Delete 22" << "\n";
+	t->delete_recur(22);
+	cout << t->get_debug_string() << "\n";
+
+	cout << "insert 12" << "\n";
+	t->insert_r(12);
+	cout << t->get_debug_string() << "\n";
+
+	cout << "insert 15" << "\n";
+	t->insert_r(15);
+	cout << t->get_debug_string() << "\n";
+
+	cout << "Delete 12" << "\n";
+	t->delete_recur(12);
+	cout << t->get_debug_string() << "\n";
+
+	cout << "delete 30" << "\n";
+	t->delete_recur(30);
+	cout << t->get_debug_string() << "\n";
+
+	cout << t->treesum() << "\n";
+	cout << t->nc() << "\n";
+	cout << t->ls() << "\n";
+	cout << t->ns(1) << "\n";
+	cout << t->h() << "\n";
+return 0;
 }
+
